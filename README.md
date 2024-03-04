@@ -6,11 +6,10 @@ After cloning this repo, make sure you have `duplicated` the `.env.example` file
 yarn
 ```
 
-### Install GLOBAL SEQUELIZE-CLI AND MYSQL2 (OPTIONAL)
+### Install GLOBAL SEQUELIZE-CLI
 
 ```sh
 [Sequelize-cli](https://www.npmjs.com/package/sequelize-cli)
-[Mysql2](https://www.npmjs.com/package/mysql2)
 ```
 
 ### Enabled Husky
