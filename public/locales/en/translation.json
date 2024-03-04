@@ -1,0 +1,22 @@
+{
+  "welcome": "Welcome",
+  "errors": {
+    "already_phone": "Phone number already in use",
+    "already_email": "Email already in use",
+    "incorrect_email_or_pass": "Incorrect email or password",
+    "incorrect_UUID_format": "Incorrect uuid format",
+    "invalid_user_login": "Invalid user login",
+    "session_ended": "The login session has ended, please re-login.",
+    "balance_less": "less balance",
+    "not_found": "data not found or has been deleted",
+    "too_many_request": "Too Many Requests",
+    "auth_needed": "Authorization is required",
+    "password_is_required" : "Password is required",
+    "password_not_match" : "Password doesn't match"
+  },
+  "success": {
+    "login": "Login successfully",
+    "logout": "You have logged out of the application",
+    "data_received": "data has been received"
+  }
+}

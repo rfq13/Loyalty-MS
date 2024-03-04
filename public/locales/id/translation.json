@@ -1,0 +1,21 @@
+{
+  "welcome": "Selamat Datang",
+  "errors": {
+    "already_phone": "Nomor telepon sudah digunakan",
+    "already_email": "Email sudah digunakan",
+    "incorrect_email_or_pass": "Email atau Kata Sandi salah",
+    "incorrect_UUID_format": "Format uuid tidak benar",
+    "invalid_user_login": "Login pengguna tidak valid",
+    "not_found": "data tidak ditemukan atau telah dihapus",
+    "too_many_request": "Terlalu Banyak Permintaan",
+    "auth_needed" : "otorisasi diperlukan!",
+    "password_is_required" : "Password wajib diisi",
+    "password_not_match" : "Password salah",
+    "password_length": "Password minimal 8 karakter"
+  },
+  "success": {
+    "login": "Berhasil masuk",
+    "logout": "Anda telah keluar dari aplikasi",
+    "data_received": "data telah diterima"
+  }
+}
