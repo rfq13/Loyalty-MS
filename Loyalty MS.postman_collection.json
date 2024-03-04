@@ -1,0 +1,517 @@
+{
+	"info": {
+		"_postman_id": "91ff77c7-ac35-487a-9bb9-46a9069cf4fa",
+		"name": "Loyalty MS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24020889",
+		"_collection_link": "https://lunar-zodiac-288786.postman.co/workspace/My-Workspace~e6320f29-1f0a-4bf9-8885-5cf0040f4d33/collection/24020889-91ff77c7-ac35-487a-9bb9-46a9069cf4fa?action=share&source=collection_link&creator=24020889"
+	},
+	"item": [
+		{
+			"name": "Tier",
+			"item": [
+				{
+					"name": "Add",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{admintoken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Silver\",\n    \"minPoin\": 41,\n    \"maxPoin\": 80\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/tier",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"tier"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{admintoken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/tier?filtered=[{\"id\":\"name\", \"value\":\"\"}]",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"tier"
+							],
+							"query": [
+								{
+									"key": "filtered",
+									"value": "[{\"id\":\"name\", \"value\":\"\"}]"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{admintoken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Brown\",\n    \"minPoin\": 0,\n    \"maxPoin\": 40\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/tier/:id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"tier",
+								":id"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": null,
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "50808912-64fb-4f2c-9e71-264f2fe46f39"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{admintoken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Kayu\",\n    \"minPoin\": 41,\n    \"maxPoin\": 80\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/tier/:id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"tier",
+								":id"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": null,
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "b768ce27-9e87-436f-b71e-9436ab38d41d"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Program",
+			"item": [
+				{
+					"name": "Add Program",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{admintoken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Poin Puasa\",\n    \"type\": \"community\",\n    \"benefitType\": \"percentage\",\n    \"activity\": \"Member Get Member\",\n    \"benefitValue\": \"12\",\n    \"startDate\": \"2023-03-4 00:00:00\",\n    \"endDate\": \"2023-04-4 00:00:00\",\n    \"Tiers\": [\n        \"50808912-64fb-4f2c-9e71-264f2fe46f39\"\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/program",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"program"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Program",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{admintoken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/program?filtered=[{\"id\":\"benefitValue\", \"value\":14, \"operator\":\"lt\"}]",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"program"
+							],
+							"query": [
+								{
+									"key": "filtered",
+									"value": "[{\"id\":\"benefitValue\", \"value\":14, \"operator\":\"lt\"}]"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Report",
+			"item": [
+				{
+					"name": "Redeemed",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{admintoken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/poin/report/redeemed",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"poin",
+								"report",
+								"redeemed"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Export Redeemed",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{admintoken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/poin/report/redeemed/export",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"poin",
+								"report",
+								"redeemed",
+								"export"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Export Earned",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{admintoken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/poin/report/earned/export",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"poin",
+								"report",
+								"earned",
+								"export"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Earned",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{admintoken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/poin/report/earned",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"poin",
+								"report",
+								"earned"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login Admin",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"admintoken\",pm.response.json().accessToken)"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"admin@mail.com\",\n    \"password\": \"abcdeFG6*$\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/auth/sign-in",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"auth",
+						"sign-in"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Transaction",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{admintoken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"MemberId\":\"\",\n    \"items\":[]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/transaction",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"transaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Member",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{admintoken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"MemberId\":\"\",\n    \"items\":[]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/community/add-member",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"community",
+						"add-member"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
