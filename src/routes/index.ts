@@ -11,7 +11,7 @@ route.use('/', routeDir)
 
 route.get('/', async function (req: Request, res: Response) {
   const buildResponse = HttpResponse.get({
-    message: 'Express Sequelize TS, Support by Nusantech',
+    message: 'Express Sequelize TS',
     apiDocs: '/api-docs',
     healthStatus: '/health',
   })
